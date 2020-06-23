@@ -1,0 +1,3 @@
+rootProject.name = 'com.kodilla2'
+include 'kodilla-exception'
+
