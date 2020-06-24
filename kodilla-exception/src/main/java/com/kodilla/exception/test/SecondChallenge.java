@@ -14,6 +14,7 @@ public class SecondChallenge {
             throw new ExceptionHandling();
         } finally {
             System.out.println("Program completed");
+
         }
     }
 }
