@@ -9,12 +9,12 @@ public class FlightFinder {
         Map<String, Boolean> airports = new HashMap<>();
         airports.put("Kraków", true);
         airports.put("Moskwa", true);
-        if (airports.containsValue(flight.getArrivalAirport()) && airports.containsValue(flight.getDepartureAirport())) {
+        if (airports.containsKey(flight.getArrivalAirport()) && airports.containsKey(flight.getDepartureAirport())) {
             airports.get(flight.getArrivalAirport());
             airports.get(flight.getDepartureAirport());
-        }else {
+        } else {
             throw new FlightFinderException();
         }
-            return true;
+        return true;
     }
 }

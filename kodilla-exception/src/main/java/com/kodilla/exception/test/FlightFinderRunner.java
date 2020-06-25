@@ -6,7 +6,7 @@ public class FlightFinderRunner {
         Flight flight1 = new Flight("Kraków", "Moskwa");
         try {
             flightFinder.findFlight(flight1);
-            System.out.println("Wyszukano połączenie z: "+ flight1.getDepartureAirport() + "do" + flight1.getArrivalAirport());
+            System.out.println("Wyszukano połączenie z: " + flight1.getDepartureAirport() + " do " + flight1.getArrivalAirport());
         } catch (Exception e) {
             System.out.println("Brak połączenia");
         } finally {
