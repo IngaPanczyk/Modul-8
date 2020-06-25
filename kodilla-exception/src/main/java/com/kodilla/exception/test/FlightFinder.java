@@ -5,20 +5,16 @@ import java.util.Map;
 
 public class FlightFinder {
 
-    public void findFlight(Flight flight) throws Exception {
+    public boolean findFlight(Flight flight) throws Exception {
         Map<String, Boolean> airports = new HashMap<>();
-        airports.put("Kraków", false);
+        airports.put("Kraków", true);
         airports.put("Moskwa", true);
-        try {
+        if (airports.containsValue(flight.getArrivalAirport()) && airports.containsValue(flight.getDepartureAirport())) {
             airports.get(flight.getArrivalAirport());
             airports.get(flight.getDepartureAirport());
-            System.out.println(airports.containsValue(flight.getArrivalAirport()));
-            System.out.println(airports.containsValue(flight.getDepartureAirport()));
-            System.out.println("Lot jest dostępny");
-        } catch (Exception exception) {
+        }else {
             throw new FlightFinderException();
-        } finally {
-            System.out.println("Wyszukiwanie zakończone");
         }
+            return true;
     }
 }
